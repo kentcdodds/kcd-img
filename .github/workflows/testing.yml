@@ -1,0 +1,16 @@
+name: testing
+on:
+  push:
+    branches: ['main', '!all-contributors/**']
+  pull_request:
+    branches-ignore: ['all-contributors/**']
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v2
+
+      - name: ▶️ Run validate script
+        run: echo $(git rev-parse --short "$GITHUB_SHA")
