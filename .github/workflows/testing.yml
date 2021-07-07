@@ -13,4 +13,4 @@ jobs:
         uses: actions/checkout@v2
 
       - name: ▶️ Run validate script
-        run: echo "$GITHUB_SHA" && echo $(git rev-parse "$GITHUB_SHA")
+        run: echo ${{ github.sha }} && echo "$GITHUB_SHA" && FOO=$GITHUB_SHA
