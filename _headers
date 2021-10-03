@@ -1,2 +1,5 @@
+/*
+  Access-Control-Allow-Origin: *
+
 /fallback-pokemon.jpg
   cache-control: public,max-age=604800,immutable
